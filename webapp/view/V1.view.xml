@@ -1,0 +1,52 @@
+<mvc:View controllerName="mares.selectionscreen.controller.V1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:l="sap.ui.layout"
+    xmlns:dr="sap.ui.webc.main"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <f:SimpleForm id="SimpleFormDisplay354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Choose a property or search for it with"
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="4"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+           emptySpanXL="2"
+			emptySpanL="2"
+			emptySpanM="2"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="2"
+			columnsM="2"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Property Number" design="Bold"/>
+                <HBox >
+                <Input   id="tplnrInput"/>
+                <Text   id="tplnrTxt"/>
+                <Button id="searchBtn" icon="sap-icon://search" type="Emphasized" press="onSearch" width="10%" />
+                </HBox>
+                <core:Title class="ttlCls"/>
+                <Label text="Select Accounting Period" design="Bold" id="DRLbl" visible="false"/>
+                	<dr:DateRangePicker
+                            visible="false"
+							id="DRP1"
+							placeholder="Enter Date"
+							change="handleChange"
+							class="sapUiSmallMarginBottom"/>
+			</f:content>
+		</f:SimpleForm>
+        <Toolbar >
+        <Button  text="Back" visible="false" id="backBtn" icon="sap-icon://close-command-field" type="Emphasized" press="onBack" ></Button>
+        <ToolbarSpacer />
+        <Button  text="Continue in View Mode" id="EditContinueBtn" visible="false" iconFirst="false"  type="Emphasized" press="onContinue" ></Button>
+        <Button  text="Continue" iconFirst="false" icon="sap-icon://open-command-field" type="Emphasized" press="onContinue" ></Button>
+        </Toolbar>
+         </content>
+    </Page>
+</mvc:View>

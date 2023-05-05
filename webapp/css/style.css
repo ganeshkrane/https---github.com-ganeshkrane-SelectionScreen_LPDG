@@ -1,0 +1,6 @@
+/* Enter your custom styles here */
+
+.sapUiSizeCompact .sapUiFormContainerTitle>.sapUiFormTitle {
+    height: 0rem;
+    line-height: 0rem;
+}

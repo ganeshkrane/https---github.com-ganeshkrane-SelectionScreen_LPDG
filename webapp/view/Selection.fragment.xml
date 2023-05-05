@@ -1,0 +1,85 @@
+<core:FragmentDefinition
+	xmlns="sap.ui.comp.valuehelpdialog"
+	xmlns:m="sap.m"
+	xmlns:fb="sap.ui.comp.filterbar"
+	xmlns:core="sap.ui.core">
+	<ValueHelpDialog
+		title="{i18n>dialogTitle}"
+		ok=".onValueHelpOkPress"
+		cancel=".onValueHelpCancelPress"
+		supportRanges="true"
+        supportMultiselect="false"
+		key="ProductCode"
+		descriptionKey="ProductName">
+		<filterBar>
+			<fb:FilterBar advancedMode="true" search=".onFilterBarSearch" isRunningInValueHelpDialog="true">
+				<fb:filterGroupItems>
+					<fb:FilterGroupItem
+						groupName="__$INTERNAL$"
+						name="tplnr"
+						label="Functional Location"
+						visibleInFilterBar="true">
+						<fb:control>
+							<m:Input name="tplnr" />
+						</fb:control>
+					</fb:FilterGroupItem>
+                    <fb:FilterGroupItem
+						groupName="__$INTERNAL$"
+						name="street"
+						label="Street"
+						visibleInFilterBar="true">
+						<fb:control>
+							<m:Input name="street" />
+						</fb:control>
+					</fb:FilterGroupItem>
+                    <fb:FilterGroupItem
+						groupName="__$INTERNAL$"
+						name="houseNum"
+						label="House Number"
+						visibleInFilterBar="true">
+						<fb:control>
+							<m:Input name="houseNum" />
+						</fb:control>
+					</fb:FilterGroupItem>
+                     <fb:FilterGroupItem
+						groupName="__$INTERNAL$"
+						name="plz"
+						label="plz"
+						visibleInFilterBar="true">
+						<fb:control>
+							<m:Input name="plz" />
+						</fb:control>
+					</fb:FilterGroupItem>
+                    <fb:FilterGroupItem
+						groupName="__$INTERNAL$"
+						name="Ort"
+						label="Ort"
+						visibleInFilterBar="true">
+						<fb:control>
+							<m:Input name="Ort" />
+						</fb:control>
+					</fb:FilterGroupItem>
+                    <fb:FilterGroupItem
+						groupName="__$INTERNAL$"
+						name="ObjectNumber"
+						label="ObjectNumber"
+						visibleInFilterBar="true">
+						<fb:control>
+							<m:Input name="ObjectNumber" />
+						</fb:control>
+					</fb:FilterGroupItem>
+                    <fb:FilterGroupItem
+						groupName="__$INTERNAL$"
+						name="parnr"
+						label="Number of Contact Person"
+						visibleInFilterBar="true">
+						<fb:control>
+							<m:Input name="parnr" />
+						</fb:control>
+					</fb:FilterGroupItem>
+
+				</fb:filterGroupItems>
+			</fb:FilterBar>
+		</filterBar>
+	</ValueHelpDialog>
+</core:FragmentDefinition>
